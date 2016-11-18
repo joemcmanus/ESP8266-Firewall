@@ -3,7 +3,7 @@
 
 Overview
 ----
-The ESP8266 is an amazing little device with embedded WiFi. I was unable to fiund a firewall for it and this is a simple firewall as a result. Limitations: this only allows a /24 for now. But really a /24 should be more than enough for an ESP8266. I will probably make it more flexible in the next version. 
+The ESP8266 is an amazing low cost device with embedded WiFi. I was unable to find a firewall for it so this is what I came up with. A simple firewall/access list. Limitations: this only allows a /24 for now. But really a /24 should be more than enough for an ESP8266. I will probably make it more flexible in the next version. 
 
 To import the libary simply go to Sketch -> Include Library -> Add .ZIP Library. 
 Use 
