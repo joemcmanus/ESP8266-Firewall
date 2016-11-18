@@ -20,9 +20,8 @@ Then initialize the firewall object.
 
 In your main loop check to see if you passed the firewall. 
 
-
-   int firewallResponse = firewall.checkFirewall(client.remoteIP().toString(), allowNet);
-    if ( firewallResponse == 0) {
+    int firewallResponse = firewall.checkFirewall(client.remoteIP().toString(), allowNet);
+     if ( firewallResponse == 0) {
 
 
 Sample
