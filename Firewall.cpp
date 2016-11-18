@@ -28,8 +28,8 @@ int Firewall::checkFirewall(String clientIP, String allowNet) {
   String c2o = clientIP.substring(clientFirst + 1, clientSecond);
   String c3o = clientIP.substring(clientSecond + 1, clientThird);
   String clientSubnet = c1o + "." +  c2o + "." +  c3o;
-  Serial.println("Firewall Allow: " + allowNet);
-  Serial.println("Client Subnet: " + clientSubnet);
+  //Serial.println("Firewall Allow: " + allowNet);
+  //Serial.println("Client Subnet: " + clientSubnet);
   if ( clientSubnet != allowNet ) {
     Serial.println("Blocking Client");
     return 1;
