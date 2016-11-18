@@ -15,7 +15,7 @@ In your sketch set the variable allowNet to the first three octets of the networ
 
 Then initialize the firewall object. 
 
-   Firewall firewall;
+    Firewall firewall;
 
 
 In your main loop check to see if you passed the firewall. 
