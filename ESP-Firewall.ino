@@ -5,7 +5,7 @@
 // This example will display the temperature from an TMP36 if authenticated.
 //
 // Joe McManus josephmc@alumni.cmu.edu
-// version 0.1 2016.11.16
+// version 0.2 2016.11.21
 // Copyright (C) 2016 Joe McManus
 //
 // Kickstarted this by looking at the Sparkfun ESP8266 Thing Dev
@@ -31,7 +31,9 @@ const char WiFiPSK[] = "yourPassphrase";
 const int tempPin = A0;
 
 //Set the subnet you will ALLOW traffic from. 
-String allowNet = "192.168.1"; // Just use the first 3 octets.
+//Right now it just supports /24, /16 or /8 networks. 
+//i.e. allowNet="192.168.1"  | allowNet="172.16" | allowNet="10" 
+String allowNet = "192.168.1"; 
 
 WiFiServer server(80);
 

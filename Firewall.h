@@ -1,7 +1,7 @@
 /* 
  * Firewall.h - Library for a basic firewall.
  * Joe McManus josephmc@alumni.cmu.edu
- * version 0.1 2016.11.16
+ * version 0.2 2016.11.21
  * Copyright (C) 2016 Joe McManus
  *
  * This program is free software: you can redistribute it and/or modify
