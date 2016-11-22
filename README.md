@@ -9,7 +9,7 @@ To import the libary simply go to Sketch -> Include Library -> Add .ZIP Library.
 Use 
 ----
 
-In your sketch set the variable allowNet to the octets of the network you'd like to allow. Use one of the following format Use one of the following formats. 
+In your sketch set the variable allowNet to the octets of the network you'd like to allow. Use one of the following formats. Only one network is supported as of now.
 
     String allowNet = "192.168.1";
     String allowNet = "172.16";
