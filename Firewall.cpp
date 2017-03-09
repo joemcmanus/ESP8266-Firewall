@@ -23,10 +23,10 @@ int Firewall::checkFirewall(String clientIP, String allowNet) {
 	int clientFirst = clientIP.indexOf(".", 0);
 	int clientSecond = clientIP.indexOf(".", clientFirst + 1);
 	int clientThird = clientIP.indexOf(".", clientSecond + 1);
+	int clientFourth = clientIP.indexOf(".", clientThird + 1);
   
 	int i=0;
 	int subnet=0;
-
 
 	//Count the occurances of . to figure out what we allow
  	while ( i <  allowNet.length() ) {
@@ -44,17 +44,21 @@ int Firewall::checkFirewall(String clientIP, String allowNet) {
 	//Split the client IP in to octets only keep what we need to match against FW rule
 	String c1o = clientIP.substring(0, clientFirst); 
   	String clientSubnet = c1o;
-	if ( subnet == 1 || subnet == 2 ) {
+	if ( subnet == 1 || subnet == 2 || subnet == 3) {
 		String c2o = clientIP.substring(clientFirst + 1, clientSecond);
   		clientSubnet = clientSubnet + "." +  c2o;
   	}
-	if ( subnet == 2 ) {
+	if ( subnet == 2 || subnet == 3) {
 		String c3o = clientIP.substring(clientSecond + 1, clientThird);
   		clientSubnet = clientSubnet + "." +  c3o;
   	}
+  	if ( subnet == 3) {
+  		String c4o = clientIP.substring(clientThird + 1, clientFourth);
+  		clientSubnet = clientSubnet + "." + c4o;
+  	}
 	//Troubleshooting
-	//Serial.println("Firewall Allow: " + allowNet);
-	//Serial.println("Client Subnet: " + clientSubnet);
+	Serial.println("Firewall Allow: " + allowNet);
+	Serial.println("Client Subnet: " + clientSubnet);
 
 	if ( clientSubnet != allowNet ) {
 		//Troubleshooting
