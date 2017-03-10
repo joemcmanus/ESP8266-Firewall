@@ -3,7 +3,7 @@
 
 Overview
 ----
-The ESP8266 is an amazing low cost device with embedded WiFi. I was unable to find a firewall for it so this is what I came up with. A simple firewall/access list. Limitations: this only allows for /24, /16 or /8 networks.  But really a /24 should be more than enough for an ESP8266. 
+The ESP8266 is an amazing low cost device with embedded WiFi. I was unable to find a firewall for it so this is what I came up with. A simple firewall/access list.
 
 To import the libary simply go to Sketch -> Include Library -> Add .ZIP Library. 
 Use 
@@ -11,6 +11,7 @@ Use
 
 In your sketch set the variable allowNet to the octets of the network you'd like to allow. Use one of the following formats. Only one network is supported as of now.
 
+    String allowNet = "192.168.1.149";
     String allowNet = "192.168.1";
     String allowNet = "172.16";
     String allowNet = "10";
